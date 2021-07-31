@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use \App\Models\Product;
-use \App\Models\Invoice; 
+use App\Models\Invoice; 
+use App\Models\Product;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Invoice::factory(4)->create();
-        Product::factory(60)->create();
+        Invoice::factory(8)->create();
+        Product::factory(40)->create();
     }
 }

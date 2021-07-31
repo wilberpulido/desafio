@@ -22,10 +22,10 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'invoice_id' => rand(1,4),
+            'invoice_id' => rand(1,8),
             'name' => $this->faker->name(),
-            'quantity' => rand(1,300),
-            'price' => mt_rand(500,2000000),
+            'quantity' => rand(1,120),
+            'price' => mt_rand(500,50000),
         ];
     }
 }
