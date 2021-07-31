@@ -17,7 +17,7 @@ class PageController extends Controller
 
             foreach ($invoice->products as $product) {
                 $subTotal = $product->price * $product->quantity;
-                $invoice->total += $subTotal;
+                $invoice->totalOneChallenge += $subTotal;
                 
                 //boolean to productOverOneHundred
                 if ($product->quantity > 100) {

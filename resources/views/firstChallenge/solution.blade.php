@@ -30,7 +30,7 @@
                             @foreach ($invoices as $invoice)
                                 <tr>
                                     <td class="text-center">{{ $invoice->id }}</td>
-                                    <td class="text-center">{{ $invoice->total }}</td>
+                                    <td class="text-center">{{ $invoice->totalOneChallenge }}</td>
                                 </tr>    
                             @endforeach
                         </tbody>

@@ -19,6 +19,7 @@ class CreateInvoicesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('seller_id');
             $table->string('type');
+            $table->double('total',12,2);
             $table->timestamps();
         });
     }
