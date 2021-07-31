@@ -36,4 +36,8 @@ class PageController extends Controller
     {
         return view('secondChallenge.solution');
     }
+    public function fourthChallenge()
+    {
+        return view('fourthChallenge.solution');
+    }
 }
