@@ -95,6 +95,12 @@
                         - Con un vistazo al docker-compose.yml podremos ver que versión de cada tecnología usamos, ademas de detalles como la ubicación del dockerfile que el docker-composer.yml ejecuta como contexto de build. Y un sin fin de información interesante que no viene al caso.
                     </p>
                     <p>
+                        - Una vez termines la jornada de trabajo en el proyecto, debes detener los contenedores, para eso debes ir a la consola donde corren esos procesos y usar: <strong>Control + C</strong>, para de esa manera matar el proceso. ¿Lo negativo? que si bien se detienen los contenedores, no se eliminan del todo y lo podemos comprobar con <strong>docker ps -a</strong>. Como Laravel consideró este problema, te hago la siguiente sugerencia.
+                    </p>
+                    <p>
+                        - Cada vez que vayas a trabajar el proyecto será necesario que corras tus contenedores, por tanto, mi sugerencia es usar: <strong>vendor/bin/sail up -d</strong>, de esta manera la consola donde ejecutes el comando no se quedará mostrando los logs de los contenedores y no se mantendrá ocupada, para detener los contenedores tendrás que ejecutar: <strong>vendor/bin/sail down</strong>. De esta manera, sail con la instrucción down esta seteado para detener y aliminar todos los contenedores y no tenemos que preocuparnos por eso.
+                    </p>
+                    <p>
                         <strong>Visualizar el nuevo proyecto</strong>: Para eso, sólo debes escribir en el navegador: <a href="http://localhost/" target="_blank" rel="noopener noreferrer">http://localhost/</a>.
                     </p>
                 </div>
@@ -182,7 +188,7 @@
                         <strong>example-app</strong>: Nombre que tendrá nuestra aplicación.
                     </p>
                     <p>
-                        El detalle de todas las dependecias que instala, las vemos <a target="__blank" href="https://packagist.org/packages/laravel/laravel">aquí</a>. Si bien son las mismas dependencias que cuando usamos docker, vía composer tenemos que contar en nuestra computadora con cada tecnología que vayamos a usar y hacer unas configuraciones previas como crear una base de datos con el nombre definido en el .env según cada herramienta que usemos.
+                        El detalle de todas las dependecias que instala, las vemos <a target="__blank" href="https://packagist.org/packages/laravel/laravel">aquí</a>. Si bien son las mismas dependencias que cuando usamos docker, vía composer tenemos que contar en nuestra computadora con cada tecnología que vayamos a usar y hacer unas configuraciones previas como crear una base de datos con el nombre definido en el .env según cada herramienta que usemos. Por ejemplo, si uso mysql, debo crear un usuario y una base de datos con los nombres y contraseña que señale en el .env.
                     </p>
                     <p>
                         Despues de descargado e instalado el proyecto, será necesario que escribas en consola:
@@ -198,6 +204,38 @@
                     </p>
                     <p>
                         Con el primer comando entras al proyecto y con el segundo corres el server. Para ver nuestro proyecto debemos ir a: http://example-app.test
+                    </p>
+                    <p>
+                        <strong>Nota:</strong>: es posible instalar un binario de laravel para crear nuevos proyectos con composer. Para eso debemos usar:
+                    </p>
+                    <p>
+                        <strong>
+                            <em>
+                                composer global require laravel/installer.
+                            </em>
+                        </strong>
+                    </p>
+                    <p>
+                        De esa manera usamosa  composer para instalar de manera global laravel en nuestra computadora, y así en cualquier carpeta poder usar:
+                    </p>
+                    <p>
+                        <strong>
+                            <em>
+                                laravel new example-app
+                            </em>
+                        </strong>
+                    </p>
+                    <p>
+                        Para crear un proyecto de nombre example-app, luego de creado es necesario como en la instalación directa por composer entrar a la carpeta y levantar el servidor.
+                    </p>
+                    <p>
+                        <strong>
+                            <em>
+                                cd example-app
+                                <br>
+                                php artisan serve
+                            </em>
+                        </strong>
                     </p>
                 </div>
             </div>
