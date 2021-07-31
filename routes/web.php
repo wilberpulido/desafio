@@ -30,3 +30,5 @@ Route::get('/thirdChallenge', [App\Http\Controllers\PageController::class,'third
 
 Route::get('/fourthChallenge', [App\Http\Controllers\PageController::class,'fourthChallenge'])->name('fourthChallenge.solution');
 
+Route::get('/fourthChallenge', [App\Http\Controllers\PageController::class,'fourthChallenge'])->name('fourthChallenge.solution');
+
