@@ -32,4 +32,8 @@ class PageController extends Controller
         }
         return view('firstChallenge.solution',compact('invoices'));
     }
+    public function secondChallenge()
+    {
+        return view('secondChallenge.solution');
+    }
 }

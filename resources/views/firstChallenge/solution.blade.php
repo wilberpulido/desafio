@@ -9,12 +9,12 @@
         {{-- table one --}}
         <div class="col-4">
             <div class="card">
+                <div class="card-header">
+                    <h6 class="text-center">
+                        Invoices and totals
+                    </h6>
+                </div>
                 <div class="card-body">
-                    <div class="card-header">
-                        <h6 class="text-center">
-                            Invoices and totals
-                        </h6>
-                    </div>
                     <table id="academiesTable" class="table">
                         <thead>
                             <tr>
@@ -41,12 +41,12 @@
         {{-- table two --}}
         <div class="col-4">
             <div class="card">
+                <div class="card-header">
+                    <h6 class="text-center">
+                        Invoices that have products with quantity greater than 100
+                    </h6>
+                </div>
                 <div class="card-body">
-                    <div class="card-header">
-                        <h6 class="text-center">
-                            Invoices that have products with quantity greater than 100
-                        </h6>
-                    </div>
                     <table id="academiesTable" class="table">
                         <thead>
                             <tr>
@@ -73,12 +73,12 @@
         {{-- table three --}}
         <div class="col-4">
             <div class="card">
+                <div class="card-header">
+                    <h6 class="text-center">
+                        Names of products whose final value is greater than 100
+                    </h6>
+                </div>
                 <div class="card-body">
-                    <div class="card-header">
-                        <h6 class="text-center">
-                            Names of products whose final value is greater than 100
-                        </h6>
-                    </div>
                     <table id="academiesTable" class="table">
                         <thead>
                             <tr>
