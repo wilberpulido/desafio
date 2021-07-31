@@ -14,4 +14,7 @@ class Invoice extends Model
     {
         return $this->hasMany(Product::class,'invoice_id');
     }
+    protected $attributes = [
+        'total' => 0,
+    ];
 }
