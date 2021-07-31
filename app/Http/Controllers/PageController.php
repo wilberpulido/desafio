@@ -7,9 +7,15 @@ use App\Models\Invoice;
 
 class PageController extends Controller
 {
+    protected $invoice;
+    public function __construct(Invoice $invoice)
+    {
+        $this->invoice = $invoice;
+    }
+
     public function firstChallenge()
     {
-        $invoices = Invoice::all();
+        $invoices = $this->invoice::all();
 
         foreach ($invoices as $invoice) {
             $invoice->productOverOneHundred = false;
@@ -36,6 +42,15 @@ class PageController extends Controller
     {
         return view('secondChallenge.solution');
     }
+
+    public function thirdChallenge()
+    {
+        $invoices = $this->invoice::all();
+
+        return view('thirdChallenge.solution',compact('invoices'));
+
+    }
+  
     public function fourthChallenge()
     {
         return view('fourthChallenge.solution');
