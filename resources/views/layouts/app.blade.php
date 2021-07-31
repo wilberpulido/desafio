@@ -44,7 +44,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="{{ route('thirdChallenge.solution') }}">
                                 third challenge
                             </a>
                         </li>
