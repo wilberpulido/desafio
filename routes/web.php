@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// First challenge Route
+Route::get('/firstChallenge', [App\Http\Controllers\PageController::class,'firstChallenge'])->name('firstChallenge.solution');
+
