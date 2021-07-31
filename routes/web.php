@@ -24,3 +24,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/firstChallenge', [App\Http\Controllers\PageController::class,'firstChallenge'])->name('firstChallenge.solution');
 
 Route::get('/secondChallenge', [App\Http\Controllers\PageController::class,'secondChallenge'])->name('secondChallenge.solution');
+
+Route::get('/fourthChallenge', [App\Http\Controllers\PageController::class,'fourthChallenge'])->name('fourthChallenge.solution');
