@@ -42,8 +42,6 @@ class PageController extends Controller
     {
         return view('secondChallenge.solution');
     }
-    
-    
 
     public function thirdChallenge()
     {
@@ -51,5 +49,10 @@ class PageController extends Controller
 
         return view('thirdChallenge.solution',compact('invoices'));
 
+    }
+  
+    public function fourthChallenge()
+    {
+        return view('fourthChallenge.solution');
     }
 }
