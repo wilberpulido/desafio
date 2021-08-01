@@ -8,6 +8,8 @@ use App\Models\Product;
 use App\Models\User;
 use App\Models\Task;
 use App\Models\Log;
+use Illuminate\Support\Str;
+
 
 
 class DatabaseSeeder extends Seeder
@@ -23,8 +25,15 @@ class DatabaseSeeder extends Seeder
         Product::factory(40)->create();
         // seeder for fifth challenge
         User::factory(4)->create();
-        Task::factory(10)->create();
-        Log::factory(25)->create();
+        User::create([
+            'name'=> "TWGroup",
+            'email'=>"twgroup@gmail.com",
+            'email_verified_at' => now(),
+            'password' => bcrypt('password'), // password
+            'remember_token' => Str::random(10),
+        ]);
+        Task::factory(15)->create();
+        Log::factory(30)->create();
 
 
     }
