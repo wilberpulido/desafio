@@ -15,7 +15,7 @@
                     </h6>
                 </div>
                 <div class="card-body">
-                    <table id="academiesTable" class="table">
+                    <table id="totalInvoiceObserver" class="table">
                         <thead>
                             <tr>
                                 <th class="col-3 text-center">

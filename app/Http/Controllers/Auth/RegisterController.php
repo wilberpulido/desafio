@@ -58,7 +58,7 @@ class RegisterController extends Controller
                     }
                 },
             ],
-            'password' => ['required', 'string', 'min:2', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 

@@ -15,7 +15,7 @@
                     </h6>
                 </div>
                 <div class="card-body">
-                    <table id="academiesTable" class="table">
+                    <table id="totalInvoice" class="table">
                         <thead>
                             <tr>
                                 <th class="col-3 text-center">
@@ -47,7 +47,7 @@
                     </h6>
                 </div>
                 <div class="card-body">
-                    <table id="academiesTable" class="table">
+                    <table id="IDInvoiceOverOneHundred" class="table">
                         <thead>
                             <tr>
                                 <th class="text-center">
@@ -79,7 +79,7 @@
                     </h6>
                 </div>
                 <div class="card-body">
-                    <table id="academiesTable" class="table">
+                    <table id="nameProductsOverMillions" class="table">
                         <thead>
                             <tr>
                                 <th class="col-4 text-center">
