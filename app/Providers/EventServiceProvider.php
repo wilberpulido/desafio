@@ -6,6 +6,11 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use App\Models\Product;
+use App\Observers\ProductObserver;
+
+use App\Models\Log;
+use App\Observers\LogObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -27,6 +32,7 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Product::observe(ProductObserver::class);
+        Log::observe(LogObserver::class);
     }
 }
