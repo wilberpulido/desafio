@@ -53,13 +53,15 @@
                                 fourth challenge
                             </a>
                         </li>
+                        @guest
+                        @else
                         <li class="nav-item active">
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="{{ route('tasks.index') }}">
                                 fifth challenge
                             </a>
                         </li>
+                        @endguest
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto col-2 d-flex justify-content-end">
                         <!-- Authentication Links -->
@@ -69,7 +71,6 @@
                                     <a class="nav-link text-right" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link text-right" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -80,14 +81,12 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -98,8 +97,25 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4 container">
+            <div class="row justify-content-center">
+                <div class="col-md-10"> 
+                    @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                    @endif
+                    @if ($errors-> any())
+                    {{-- Variable global que almacena todos los errores --}}
+                    <div class="alert alert-danger">
+                        {{-- De esta manera rescatas todos los errores, con all(), acá lo recorre e imprime --}}
+                        @foreach ($errors->all() as $error)
+                        -{{$error}} <br>
+                        @endforeach
+                    </div>
+                    @endif
+                </div>
+            </div>
             @yield('content')
         </main>
     </div>
