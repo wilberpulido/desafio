@@ -22,7 +22,7 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => rand(1,4),
+            'user_id' => rand(1,5),
             'description' => $this->faker->text(250),
             'expiration_date' => date("Y-m-d", mktime(0,0,0,12,20,2021)),
             'state' => 'in process',
