@@ -22,7 +22,7 @@ class LogFactory extends Factory
     public function definition()
     {
         return [
-            'task_id' => rand(1,10),
+            'task_id' => rand(1,15),
             'comment' => $this->faker->text(250),
         ];
     }

@@ -24,9 +24,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = $this->task->orderBy('id','desc')->paginate(15);
-        
-        // dd($tasks);
+        $tasks = $this->task->orderBy('id','desc')->paginate(10);
 
         return view('tasks.index', compact('tasks'));
     }
