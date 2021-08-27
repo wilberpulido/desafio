@@ -8,6 +8,9 @@
                 Welcome to my resolution
             </h2>
         </div>
+        <p>
+            Esta es una preve presentacion de mi desafio, por favor, contramenme.
+        </p>
     </div>
 </div>
 @endsection
