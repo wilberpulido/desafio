@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-warning shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Resolucion') }}
@@ -32,7 +32,7 @@
 
                 <div class="collapse navbar-collapse row"  id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav col-10 d-flex justify-content-around">
+                    <ul class="navbar-nav col-10 d-flex justify-content-around bg-danger">
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ route('firstChallenge.solution') }}">
                                 first challenge
